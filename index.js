@@ -12,8 +12,8 @@ app.use(cors())
 app.get("/",async(req,res)=>{
 res.status(200).send({message:"welcome to my backend server"})
 })
-app.use("/api/user",userRoute)
-app.use("/api/task",postRoute)
+app.use("/user",userRoute)
+app.use("/task",postRoute)
 
 app.use((req, res, next) => {
     res.status(404).send({ msg: "Route is not found" });

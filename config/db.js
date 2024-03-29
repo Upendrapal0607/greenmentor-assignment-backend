@@ -1,7 +1,7 @@
 const mongoose=require("mongoose")
 const mysql = require("mysql2/promise");
 require("dotenv").config()
-
+// mongo db connection
 const connection = mongoose.connect(process.env.MongoDB_URL)
 
 
@@ -14,6 +14,7 @@ const mysqlConnection = async function query({ query, values = [] }) {
     user: process.env.MYSQL_USER,
     password: process.env.MYSQL_PASSWORD,
   });
+
 
   try {
     const [results] = await dbconnection.execute(query, values);

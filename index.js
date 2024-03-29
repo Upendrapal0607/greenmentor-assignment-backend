@@ -14,6 +14,7 @@ app.use(cors())
 app.get("/",async(req,res)=>{
 res.status(200).send({message:"welcome to my backend server"})
 })
+// All route end point
 app.use("/user",userRoute)
 app.use("/task",postRoute)
 app.use("/product",productRoute)
